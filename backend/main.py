@@ -4,23 +4,14 @@ from pydantic import BaseModel
 from pymongo import MongoClient
 from bson import ObjectId
 from typing import List
-from dotenv import load_dotenv
 import logging
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Load environment variables from .env file
-#load_dotenv()
-
-# Get MongoDB URI from environment variable
-mongo_uri = "mongodb+srv://naidurohit555:9b1R6wUDi6FWRygj@full.sqqhq.mongodb.net/?retryWrites=true&w=majority&appName=full&tls=true"   #os.getenv("MONGO_URI")
-
-# Check if the MongoDB URI is loaded correctly
-if not mongo_uri:
-    logger.error("MongoDB URI not found in environment variables!")
-    raise ValueError("MongoDB URI is not set in the .env file")
+# MongoDB connection string (hardcoded)
+mongo_uri = "mongodb+srv://naidurohit555:9b1R6wUDi6FWRygj@full.sqqhq.mongodb.net/?retryWrites=true&w=majority&appName=full&tls=true"
 
 # MongoDB connection setup
 try:
