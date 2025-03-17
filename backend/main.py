@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 load_dotenv()
 
 # Get MongoDB URI from environment variable
-mongo_uri = os.getenv("MONGO_URI")
+mongo_uri = "mongodb+srv://naidurohit555:9b1R6wUDi6FWRygj@full.sqqhq.mongodb.net/?retryWrites=true&w=majority&appName=full&tls=true"   #os.getenv("MONGO_URI")
 
 # Check if the MongoDB URI is loaded correctly
 if not mongo_uri:
